@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>В мене для тебе сюрприз</title> 
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        #surprisePage h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4081;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #e040fb;
+        }
+        #surprisePage, #sliderPage, #reasonsPage {
+            display: none;
+        }
+        #surprisePage.show, #sliderPage.show, #reasonsPage.show {
+            display: block;
+        }
+        .text {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .text.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #reasonsList {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <div id="surprisePage" class="container show"> 
+   <h1>В мене для тебе сюрприз</h1> <button class="button" onclick="showSlider()">Тисни на мене</button> 
+  </div> 
+  <div id="sliderPage" class="container"> 
+   <div id="textSlider"> 
+    <div class="text show" id="text1"> 
+     <p>Дорога Катя,</p> 
+     <p>Кожен день, коли я прокидаюся, я усвідомлюю, наскільки я щасливий, що ти є в моєму житті. Твоя усмішка освітлює мої дні, а твоя доброта і тепло роблять кожен момент незабутнім.</p> 
+    </div> 
+    <div class="text" id="text2"> 
+     <p>Ти - мій найбільший скарб, і я безмежно вдячний за твою любов і підтримку. Моя любов до тебе безмежна, і я ніколи не перестану цінувати тебе та все, що ти робиш.</p> 
+    </div> 
+    <div class="text" id="text3"> 
+     <p>Я обіцяю завжди бути поруч, підтримувати тебе і любити тебе так, як ти заслуговуєш. Ти - найкраща, і я щасливий, що ти є в моєму житті.</p> 
+     <p>З любов'ю, Сайяд</p> 
+    </div> 
+    <div class="text" id="text4"> 
+     <p>Кожен момент з тобою - це дорогоцінний дар. Твоя любов надихає мене ставати кращим, і я вірю, що наше спільне життя буде наповнене щасливими моментами.</p> 
+    </div> 
+    <div class="text" id="text5"> 
+     <p>Коли ти поряд, я відчуваю, що можу досягти будь-якої мети. Ти - моє натхнення і моя радість. Я з нетерпінням чекаю, щоб провести з тобою ще багато щасливих днів.</p> 
+    </div> 
+    <div class="text" id="text6"> 
+     <p>Твоя присутність робить мій світ яскравішим. Я вдячний за твою любов і підтримку. Нехай наші дні завжди будуть сповнені теплом і щастям.</p> <button class="button" onclick="showReasons()">100 причин чому я тебе люблю</button> 
+    </div> 
+   </div> 
+   <div class="button-container"> <button class="button" onclick="prevText()">Попередній</button> <button class="button" onclick="nextText()">Наступний</button> 
+   </div> 
+  </div> 
+  <div id="reasonsPage" class="container"> 
+   <h1>100 причин чому я тебе люблю</h1> 
+   <div id="reasonsList"> 
+    <ul> 
+     <li>Ти завжди підтримуєш мене, навіть у найскладніші моменти.</li> 
+     <li>Твоя усмішка робить мої дні світлішими.</li> 
+     <li>Ти вмієш слухати мене, коли мені це найбільше потрібно.</li> 
+     <li>Твоя доброта надихає мене бути кращим.</li> 
+     <li>Ти - найпрекрасніша людина, яку я знаю.</li> 
+     <li>Ти завжди знаходиш спосіб зробити мене щасливим.</li> 
+     <li>Твої обійми – це мій улюблений вид підтримки.</li> 
+     <li>Ти завжди вмієш підняти мені настрій.</li> 
+     <li>Ти – моє натхнення.</li> 
+     <li>Ти розумієш мене без слів.</li> <!-- Додати ще 90 причин --> 
+     <li>Ти допомагаєш мені мріяти та досягати цілей.</li> 
+     <li>Твоя присутність робить моє життя яскравішим.</li> 
+     <li>Твоя турбота незамінна.</li> 
+     <li>Ти допомагаєш мені рости та розвиватися.</li> 
+     <li>Я люблю твій сміх.</li> 
+     <li>Ти завжди можеш знайти вихід із складної ситуації.</li> 
+     <li>Ти вмієш радіти життю.</li> 
+     <li>Ти надихаєш мене бути собою.</li> 
+     <li>Твої слова завжди наповнені мудрістю.</li> 
+     <li>Я вдячний за кожну мить, яку ми проводимо разом.</li> <!-- Продовжуйте список до 100 --> 
+    </ul> 
+   </div> <button class="button" onclick="showSurprise()">Назад</button> 
+  </div> 
+  <script>
+        let currentIndex = 0;
+        const texts = document.querySelectorAll('.text');
+
+        function showText(index) {
+            texts.forEach((text, i) => {
+                text.classList.remove('show');
+                if (i === index) {
+                    text.classList.add('show');
+                }
+            });
+        }
+
+        function nextText() {
+            if (currentIndex < texts.length - 1) {
+                currentIndex++;
+                showText(currentIndex);
+            }
+        }
+
+        function prevText() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showText(currentIndex);
+            }
+        }
+
+        function showSlider() {
+            document.getElementById('surprisePage').classList.remove('show');
+            document.getElementById('sliderPage').classList.add('show');
+        }
+
+        function showReasons() {
+            document.getElementById('sliderPage').classList.remove('show');
+            document.getElementById('reasonsPage').classList.add('show');
+        }
+
+        function showSurprise() {
+            document.getElementById('reasonsPage').classList.remove('show');
+            document.getElementById('surprisePage').classList.add('show');
+        }
+    </script> 
+ 
+</body></html>
